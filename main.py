@@ -54,7 +54,7 @@ def main ():
             start_time = timeit.default_timer()
 
             mask = bright_pass(img, 0.5)
-            mask = bloom(mask, 5, 1)
+            mask = bloom(mask, 4, 1)
 
             out = 0.7*img + 0.3*mask
 
