@@ -1,0 +1,12 @@
+name: miniconda
+services:
+  miniconda:
+    image: miniconda-dev
+    build: miniconda
+    volumes:
+      - /mnt/wslg/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    environment:
+      - DISPLAY=:0
+      - XDG_RUNTIME_DIR
+      - PULSE_SERVER
